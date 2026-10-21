@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -17,9 +18,13 @@ def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--term", default="202608", help="YYYYMM term code, e.g. 202608")
     ap.add_argument("--out", type=Path, default=Path("../data/umd"))
+    ap.add_argument("--cache", type=Path, default=Path("../.cache/umdio"),
+                    help="where raw umd.io pages are kept; delete it to re-download")
     args = ap.parse_args(argv)
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s",
+                        datefmt="%H:%M:%S")
 
-    sections = list(iter_sections(args.term))
+    sections = list(iter_sections(args.term, cache_dir=args.cache))
     meta = {"term": args.term, "built_at": datetime.now(timezone.utc).isoformat(),
             "source": "umd.io mirror of the Testudo Schedule of Classes",
             "sections_read": len(sections)}
