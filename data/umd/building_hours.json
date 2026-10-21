@@ -1,0 +1,71 @@
+{
+  "_format": "Spans are [open_hour, close_hour] in local time; close > 24 runs past midnight (25.5 = 1:30am next day). [] = closed all day, null = hours not known (TBD). Exceptions override regular hours on their dates.",
+  "buildings": {
+    "SSU": {
+      "name": "Adele H. Stamp Student Union",
+      "type": "union",
+      "source": "https://stamp.umd.edu/hours",
+      "verified": "2026-10-20",
+      "valid": {"from": "2026-08-27", "to": "2027-01-03"},
+      "regular": {
+        "monday": [[7, 24]], "tuesday": [[7, 24]], "wednesday": [[7, 24]], "thursday": [[7, 24]],
+        "friday": [[7, 25.5]], "saturday": [[8, 25.5]], "sunday": [[11, 24]]
+      },
+      "exceptions": [
+        {"from": "2026-09-07", "to": "2026-09-07", "spans": [[8, 24]], "note": "Labor Day"},
+        {"from": "2026-10-10", "to": "2026-10-10", "spans": [[8, 22]], "note": "Fall Break"},
+        {"from": "2026-10-11", "to": "2026-10-11", "spans": [[11, 22]], "note": "Fall Break"},
+        {"from": "2026-10-12", "to": "2026-10-12", "spans": [], "note": "Fall Break"},
+        {"from": "2026-10-13", "to": "2026-10-13", "spans": [[7, 18]], "note": "Fall Break"},
+        {"from": "2026-11-24", "to": "2026-11-24", "spans": [[7, 22]], "note": "Thanksgiving"},
+        {"from": "2026-11-25", "to": "2026-11-25", "spans": [[7, 18]], "note": "Thanksgiving"},
+        {"from": "2026-11-26", "to": "2026-11-27", "spans": [], "note": "Thanksgiving"},
+        {"from": "2026-11-28", "to": "2026-11-28", "spans": null, "note": "TBD, based on home football start time"},
+        {"from": "2026-11-29", "to": "2026-11-29", "spans": [[11, 24]], "note": "Thanksgiving. Stamp's page says 'Sunday, November 30'; Nov 30 2026 is a Monday, so read as Sunday Nov 29"},
+        {"from": "2026-12-21", "to": "2026-12-21", "spans": [[7, 22]], "note": "Winter Break"},
+        {"from": "2026-12-22", "to": "2026-12-23", "spans": [[7, 18]], "note": "Winter Break"},
+        {"from": "2026-12-24", "to": "2026-12-24", "spans": null, "note": "TBD"},
+        {"from": "2026-12-25", "to": "2027-01-03", "spans": [], "note": "Winter Break"}
+      ]
+    },
+    "MCK": {
+      "name": "McKeldin Library",
+      "type": "library",
+      "source": "https://umd.libcal.com/hours",
+      "verified": "2026-10-20",
+      "note": "LibCal weekly view for Oct 18-24, assumed to repeat until the last day of classes; finals hours not yet posted. Campus ID required before 8am and after 11pm.",
+      "valid": {"from": "2026-08-31", "to": "2026-12-11"},
+      "regular": {
+        "monday": [[0, 24]], "tuesday": [[0, 24]], "wednesday": [[0, 24]], "thursday": [[0, 24]],
+        "friday": [[0, 20]], "saturday": [[11, 20]], "sunday": [[11, 24]]
+      },
+      "exceptions": []
+    },
+    "HBK": {
+      "name": "Hornbake Library",
+      "type": "library",
+      "source": "https://umd.libcal.com/hours",
+      "verified": "2026-10-20",
+      "note": "LibCal weekly view for Oct 18-24, assumed to repeat until the last day of classes. The iSchool wing posts shorter building hours (Mon-Thu to 9:30pm, Fri to 6pm).",
+      "valid": {"from": "2026-08-31", "to": "2026-12-11"},
+      "regular": {
+        "monday": [[7, 22]], "tuesday": [[7, 22]], "wednesday": [[7, 22]], "thursday": [[7, 22]],
+        "friday": [[7, 22]], "saturday": [], "sunday": []
+      },
+      "exceptions": []
+    },
+    "CRC": {
+      "name": "Eppley Recreation Center",
+      "type": "gym",
+      "source": "https://recwell.umd.edu/todays-facility-hours",
+      "verified": "2026-10-20",
+      "note": "RecWell posts only today's hours (Tuesday Oct 20: 6am to midnight). Other weekdays assumed the same; weekend hours not posted, so unknown.",
+      "valid": {"from": "2026-08-31", "to": "2026-12-11"},
+      "regular": {
+        "monday": [[6, 24]], "tuesday": [[6, 24]], "wednesday": [[6, 24]], "thursday": [[6, 24]],
+        "friday": [[6, 24]], "saturday": null, "sunday": null
+      },
+      "exceptions": []
+    }
+  }
+}

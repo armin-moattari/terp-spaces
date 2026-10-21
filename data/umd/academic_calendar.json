@@ -1,0 +1,13 @@
+{
+  "term": "202608",
+  "source": "https://academiccatalog.umd.edu/about-university/academic-calendar/semester-calendar/",
+  "verified": "2026-10-20",
+  "classes": {"from": "2026-08-31", "to": "2026-12-11"},
+  "no_classes": [
+    {"from": "2026-09-07", "to": "2026-09-07", "name": "Labor Day"},
+    {"from": "2026-10-12", "to": "2026-10-13", "name": "Fall Break"},
+    {"from": "2026-11-25", "to": "2026-11-29", "name": "Thanksgiving Recess"}
+  ],
+  "reading_days": [{"from": "2026-12-12", "to": "2026-12-12", "name": "Reading Day"}],
+  "finals": {"from": "2026-12-14", "to": "2026-12-21", "name": "Final Exams"}
+}
